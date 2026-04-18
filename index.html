@@ -7,19 +7,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
 </head>
 <body>
 
   <!-- HERO -->
   <header class="hero" id="home">
 
-    <!-- VIDEO BACKGROUND -->
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="assets/video-desktop.mp4" type="video/mp4">
-    </video>
+ <video autoplay muted loop playsinline class="bg-video" preload="metadata">
 
-    <video autoplay muted loop playsinline class="bg-video mobile-video">
-  <source src="assets/video-mobile.mp4" type="video/mp4">
+  <!-- Mobile dulu -->
+  <source src="assets/video-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+
+  <!-- Desktop fallback -->
+  <source src="assets/video-desktop.mp4" type="video/mp4">
+
 </video>
 
     <!-- NAVBAR -->
@@ -37,7 +45,7 @@
     <!-- HERO CONTENT -->
     <div class="hero-content">
       <h1 id="heroText" class="fade-text">NICKEY Fragrance</h1>
-      <p>Luxury fragrance with fresh, aquatic & woody vibes</p>
+      <p> Luxury fragrance with fresh, aquatic & woody vibes </p>
       <button id="shopBtn">Shop Now</button>
     </div>
 
