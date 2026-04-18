@@ -229,37 +229,128 @@ button:hover {
 /* ========================= */
 @media (max-width: 768px) {
 
-  /* HERO TEXT */
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  /* HERO CONTENT */
+  .hero-content {
+    max-width: 90%;
+    gap: 15px;
+  }
+
   .hero-content h1 {
-    font-size: 32px;
+    font-size: clamp(22px, 6vw, 32px);
+    line-height: 1.2;
+    text-align: center;
+    word-break: break-word;
   }
 
   .hero-content p {
-    font-size: 14px;
-    padding: 0 10px;
+    font-size: 13px;
+    line-height: 1.5;
   }
 
   /* BUTTON */
   button {
     width: 100%;
+    max-width: 260px;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* NAVBAR */
+  nav {
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    position: static;
+    font-size: 16px;
+  }
+
+  .nav-center {
+    display: none; /* nanti bisa upgrade ke hamburger */
+  }
+
+  /* SECTION */
+  .section {
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* MARKETPLACE */
+  .marketplace {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .marketplace button {
+    width: 100%;
     max-width: 280px;
   }
 
-  /* SECTION BIAR GA KEKUNCI */
-  .section {
-    height: auto;
-    padding: 60px 20px;
-  }
-
-  /* MARKETPLACE JADI KE BAWAH */
-  .marketplace {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* CONTACT JADI KE BAWAH */
+  /* CONTACT */
   .contact-buttons {
     flex-direction: column;
+    width: 100%;
     align-items: center;
+    gap: 15px;
+  }
+
+  .contact-buttons button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* VIDEO FIX */
+  .bg-video {
+    object-position: center;
+  }
+
+  /* BACK TO TOP */
+  #backToTop {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 16px;
+  }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.section, .hero {
+  scroll-snap-align: start;
+}
+
+/* ========================= */
+/* 🎬 VIDEO RESPONSIVE */
+/* ========================= */
+
+/* default (desktop) */
+.mobile-video {
+  display: none;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .desktop-video {
+    display: none;
+  }
+
+  .mobile-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
