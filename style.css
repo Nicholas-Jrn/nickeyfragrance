@@ -223,3 +223,43 @@ button:hover {
 #backToTop:hover {
   transform: scale(1.1);
 }
+
+/* ========================= */
+/* 📱 MOBILE ONLY */
+/* ========================= */
+@media (max-width: 768px) {
+
+  /* HERO TEXT */
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  /* BUTTON */
+  button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* SECTION BIAR GA KEKUNCI */
+  .section {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  /* MARKETPLACE JADI KE BAWAH */
+  .marketplace {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* CONTACT JADI KE BAWAH */
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
