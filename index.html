@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NICKEY Fragrance</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay muted loop class="bg-video">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <!-- NAVBAR -->
+    <nav>
+      <h2 class="logo">NICKEY</h2>
+
+      <ul class="nav-center">
+        <li data-target="home">Home</li>
+        <li data-target="about">About</li>
+        <li data-target="product">Product</li>
+        <li data-target="contact">Contact</li>
+      </ul>
+    </nav>
+
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+      <h1 id="heroText" class="fade-text">NICKEY Fragrance</h1>
+      <p>Luxury fragrance with fresh, aquatic & woody vibes</p>
+      <button id="shopBtn">Shop Now</button>
+    </div>
+
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About</h2>
+  </section>
+
+  <!-- PRODUCT -->
+  <section id="product" class="section">
+    <h2>Tersedia di</h2>
+
+    <div class="marketplace">
+      <button onclick="openLink('https://shopee.co.id/link-produk-lo')">Shopee</button>
+      <button onclick="openLink('https://tokopedia.com/link-produk-lo')">Tokopedia</button>
+      <button onclick="openLink('https://tiktok.com/@username/product')">TikTok Shop</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+
+    <div class="contact-buttons">
+      <button id="emailBtn">Email</button>
+      <button id="waBtn">WhatsApp</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+<button id="backToTop">↑</button>
+
+</body>
+</html>
