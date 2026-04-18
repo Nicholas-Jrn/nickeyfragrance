@@ -124,7 +124,7 @@ button:hover {
 
 /* SECTION */
 .section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -353,4 +353,55 @@ html {
     height: 100%;
     object-fit: cover;
   }
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 80%;
+}
+
+/* CARD */
+.card {
+  aspect-ratio: 4 / 5; /* 16:20 */
+  position: relative;
+  overflow: hidden;
+  border-radius: 0; /* 🔥 tajam (sesuai request lu) */
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* OVERLAY (INI YANG TADI ERROR) */
+.card::after {
+  content: ""; /* 🔥 WAJIB */
+  position: absolute; /* 🔥 WAJIB */
+  inset: 0; /* full cover */
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.1)
+  );
+  z-index: 1;
+}
+
+/* TEXT */
+.card h3 {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 18px;
+  z-index: 2; /* di atas overlay */
+}
+
+/* HOVER EFFECT (biar lebih hidup) */
+.card:hover img {
+  transform: scale(1.05);
 }

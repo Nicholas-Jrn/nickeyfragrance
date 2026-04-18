@@ -7,24 +7,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-  
 </head>
+
 <body>
 
   <!-- HERO -->
   <header class="hero" id="home">
 
- <video autoplay muted loop playsinline class="bg-video" preload="metadata">
-
-  <!-- Mobile dulu -->
-  <source src="assets/video-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
-
-  <!-- Desktop fallback -->
-  <source src="assets/video-desktop2.mp4" type="video/mp4">
-
-</video>
+    <!-- VIDEO -->
+    <video autoplay muted loop playsinline class="bg-video" preload="metadata">
+      <!-- Mobile -->
+      <source src="assets/video-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+      <!-- Desktop -->
+      <source src="assets/video-desktop2.mp4" type="video/mp4">
+    </video>
 
     <!-- NAVBAR -->
     <nav>
@@ -32,7 +28,8 @@
 
       <ul class="nav-center">
         <li data-target="home">Home</li>
-        <li data-target="about">About</li>
+        <li data-target="about">Categories</li>
+        <li data-target="about-bottom">About</li>
         <li data-target="product">Product</li>
         <li data-target="contact">Contact</li>
       </ul>
@@ -41,15 +38,39 @@
     <!-- HERO CONTENT -->
     <div class="hero-content">
       <h1 id="heroText" class="fade-text">NICKEY Fragrance</h1>
-      <p> Luxury fragrance with fresh, aquatic & woody vibes </p>
+      <p>Luxury fragrance with fresh, aquatic & woody vibes</p>
       <button id="shopBtn">Shop Now</button>
     </div>
 
   </header>
 
-  <!-- ABOUT -->
+  <!-- CATEGORIES -->
   <section id="about" class="section">
-    <h2>About</h2>
+    <h2>Categories</h2>
+
+    <div class="category-grid">
+
+      <div class="card">
+        <img src="assets/perfume.jpg">
+        <h3>Perfume</h3>
+      </div>
+
+      <div class="card">
+        <img src="assets/men.jpg">
+        <h3>For Men</h3>
+      </div>
+
+      <div class="card">
+        <img src="assets/women.jpg">
+        <h3>For Women</h3>
+      </div>
+
+      <div class="card">
+        <img src="assets/kids.jpg">
+        <h3>Kids</h3>
+      </div>
+
+    </div>
   </section>
 
   <!-- PRODUCT -->
@@ -73,9 +94,16 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <!-- ABOUT (BOTTOM) -->
+  <section id="about-bottom" class="section">
+    <h2>About</h2>
+    <p>Brand fragrance premium dengan vibe fresh, elegant, dan modern.</p>
+  </section>
 
-<button id="backToTop">↑</button>
+  <!-- BACK TO TOP -->
+  <button id="backToTop">↑</button>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
