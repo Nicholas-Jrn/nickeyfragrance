@@ -54,4 +54,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+})
+
+const category = document.querySelector('.category-grid');
+
+/* start */
+infiniteScroll();
+
+/* pause kalau user interaksi */
+category.addEventListener('touchstart', () => isPaused = true);
+category.addEventListener('mousedown', () => isPaused = true);
+
+/* lanjut lagi */
+category.addEventListener('touchend', () => {
+  setTimeout(() => isPaused = false, 1500);
+});
+
+category.addEventListener('mouseup', () => {
+  setTimeout(() => isPaused = false, 1500);
 });
