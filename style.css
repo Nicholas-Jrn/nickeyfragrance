@@ -325,7 +325,7 @@ button:hover {
 }
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: none;
 }
 
 .section, .hero {
@@ -568,4 +568,34 @@ html {
   .category-title .line {
     width: 40px;
   }
+}
+
+#about {
+  background: #ffffff;
+  color: black;
+
+  min-height: auto;   /* 🔥 ini kunci */
+  height: auto;
+  padding-bottom: 80px; /* 🔥 panjangin ke bawah */
+}
+
+.discovery-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -28px; /* jarak dari card */
+}
+
+.discovery-btn {
+  padding: 12px 40px;
+  border-radius: 30px;
+  border: 1px solid black;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.discovery-btn:hover {
+  background: black;
+  color: white;
 }
